@@ -189,3 +189,120 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*breakpoints*/
+@media (max-width: 450px) {
+    .home header{
+        padding: 0.5rem 0.2rem;
+    }
+    .home header img{
+        height: 40px;
+    }
+    .home header button{
+        padding: 0;
+    }
+    .home header button p{
+        display: none;
+    }
+    .home header button i{
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    .home header #menu{
+        display: initial;
+    }
+    .home header .navigation{
+        position: fixed;
+        right: -360px;
+        top: 0;
+        bottom: 0;
+        width: 90%;
+        background: #302f2f;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        transition: .4s ease;
+    }
+    .home header .navigation.active{
+        right: 0;
+    }
+    .home header ul li{
+        background-color: transparent;
+        transition: .2s ease;
+        width: 100%;
+        padding: 2rem 2rem;
+        font-size: .75rem;
+    }
+    .home header ul li:hover{
+        background-color: rgb(255, 255, 255);
+        color: #302f2f;
+        width: 100%;
+    }
+    .home header ul img{
+        width: 50px;
+        object-fit: contain;
+    }
+    .home header ul .bx{
+        position: absolute;
+        top: 1rem;
+        width: 2rem;
+        height: 2rem;
+        left: .5rem;
+        color: rgb(0, 0, 0);
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    .home header ul img,
+    .home header ul .bx{
+        display: initial;
+    }
+    .home .middle{
+        font-size: 2.5rem;
+        display: none;
+    }
+    .home .content p{
+        font-size: 1rem;
+    }
+    .home .content h2{
+        font-size: 2rem;
+    }
+    .home .content h3{
+        font-size: .8rem;
+        margin-top: .6rem;
+
+    }
+
+
+    .packages{
+        grid-template-columns: 1fr;
+        padding: 2.5rem 3vw;
+    }
+    .packages .package img{
+        width: 50px;
+    }
+    .footer{
+        font-size: .7rem;
+        width: 100%;
+        text-align: center;
+    }
+    .packages .package h1{
+        font-size: 1rem;
+    }
+    .packages .package h1{
+        font-size: 0.8rem;
+    }
+    .packages .package p{
+        font-size: 0.6rem;
+    }
+}
