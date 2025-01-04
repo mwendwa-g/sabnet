@@ -1,0 +1,3 @@
+index -- signup page
+login ----- login page in case of an existing account
+packages --- packages page only accessed from login to show available packages
