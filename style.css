@@ -11,6 +11,10 @@
     --yellow: #fa8d25;
     --blue: #3308d3;
 }
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
 /*section home*/
 .home{
     height: 100vh;
@@ -56,8 +60,17 @@
 .home header img{
     height: 70px;
 }
+.home header #menu{
+    color: #ffffff;
+    font-size: 2rem;
+    display: none;
+}
 .home header ul{
     display: flex;
+}
+.home header ul img,
+.home header ul .bx{
+    display: none;
 }
 .home header ul li{
     margin: 0 1rem;
@@ -142,7 +155,6 @@
 }
 .packages .package img{
     width: 70px;
-    
 }
 .packages .package h1{
     margin-top: 2rem;
@@ -190,35 +202,42 @@
     transform: translateX(-50%);
 }
 
+
 /*breakpoints*/
-@media (max-width: 450px) {
+@media (max-width: 1200px){
     .home header{
-        padding: 0.5rem 0.2rem;
+        padding: 0.5rem 1rem;
     }
     .home header img{
-        height: 40px;
+        height: 55px;
     }
-    .home header button{
-        padding: 0;
+    .home .content p{
+        font-size: 1.8rem;
     }
-    .home header button p{
-        display: none;
+    .home .content h2{
+        font-size: 3rem;
     }
-    .home header button i{
-        width: 2rem;
-        height: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.4rem;
-        margin: 0;
+    .home .content h3{
+        font-size: 1rem;
+        margin-top: 1rem;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
+    .packages{
+        padding: 2.5rem 3vw;
+        gap: 1.5vw;
+    }
+}
+
+@media (max-width: 780px) {
     .home header #menu{
         display: initial;
     }
     .home header .navigation{
         position: fixed;
-        right: -360px;
+        right: -100%;
         top: 0;
         bottom: 0;
         width: 90%;
@@ -267,6 +286,37 @@
     .home header ul .bx{
         display: initial;
     }
+
+    .packages{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 3vw;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .home header{
+        padding: 0.5rem 0.2rem;
+    }
+    .home header img{
+        height: 40px;
+    }
+    .home header button{
+        padding: 0;
+    }
+    .home header button p{
+        display: none;
+    }
+    .home header button i{
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        margin: 0;
+    }
     .home .middle{
         font-size: 2.5rem;
         display: none;
@@ -280,7 +330,6 @@
     .home .content h3{
         font-size: .8rem;
         margin-top: .6rem;
-
     }
 
 
@@ -305,4 +354,15 @@
     .packages .package p{
         font-size: 0.6rem;
     }
+}
+
+a.purchase{
+    padding: 0.6rem 1rem;
+    width: max-content;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+}
+p.footer{
+    margin-top: 1rem;
 }
